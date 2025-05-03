@@ -1,0 +1,13 @@
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# LaTeX build files
+template/*
+!template/main.tex
+!template/library.bib
+!template/main.pdf
+!template/NYUAD_logo.jpg
+!template/placeholder.jpg
