@@ -1,0 +1,184 @@
+\documentclass[11pt]{beamer}
+
+% This file is a template for talk at a conference/colloquium.
+
+% Copyright 2025 by Yanwen Wang.
+%
+% This file is licensed under the MIT License.
+%
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+%
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+
+\mode<presentation>
+{
+  \usetheme{Madrid}
+  \setbeamercovered{transparent}
+}
+
+% Set font
+\usefonttheme{serif}
+
+% Define colors
+\definecolor{nyuad-violet-primary}{rgb}{0.341, 0.024, 0.549}
+\definecolor{nyuad-violet-secondary}{rgb}{0.541, 0.322, 0.678}
+\definecolor{nyuad-black}{HTML}{000000}
+\definecolor{grey}{HTML}{b8b8b8}
+
+\setbeamercolor{palette primary}{bg=nyuad-violet-primary, fg=white}
+\setbeamercolor{palette secondary}{bg=nyuad-violet-secondary, fg=white}
+\setbeamercolor{palette tertiary}{bg=nyuad-violet-secondary, fg=white}
+\setbeamercolor{palette quaternary}{bg=nyuad-black, fg=white} % section head left side
+\setbeamercolor{structure}{fg=nyuad-black} % itemize, enumerate, etc
+% \setbeamercolor{section in toc}{fg=black} % TOC sections
+
+% Override palette coloring with secondary
+\setbeamercolor{subsection in head/foot}{bg=nyuad-violet, fg=white} % section head right side
+
+% Number captions
+\setbeamertemplate{caption}[numbered]
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{textpos}
+\usepackage{natbib}
+
+% Add logo to the top right of each frame
+\addtobeamertemplate{frametitle}{}{
+    \begin{textblock*}{100mm}(0.77\textwidth,-0.93cm)
+    \includegraphics[height=0.9cm]{NYUAD_logo.jpg}
+    \end{textblock*}
+}
+
+% Title
+\title[Short title]{Full title}
+
+% Author(s)
+\author[Author 1 \& Author 2]{Author 1\inst{1} and Author 2\inst{1}\inst{2}}
+
+% Institution(s)
+\institute[NYUAD]{
+$^1$New York University Abu Dhabi
+\hspace{0.3cm}
+$^2$New York University Abu Dhabi
+}
+
+% Conference name and date
+\date[Conference name] % Abbreviation of conference name
+{\footnotesize \today}
+
+% Uncomment to show the table of contents at the beginning of each subsection:
+% \AtBeginSubsection[]
+% {
+%   \begin{frame}<beamer>{Outline}
+%     \tableofcontents[currentsection, currentsubsection]
+%   \end{frame}
+% }
+
+% Comment out if you do not wish to uncover everything in a step-wise fashion
+\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+\section{Introduction}
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item This is an item \citep{Smith:2012qr}.
+        \item \cite{Smith:2013jd} is a citation.
+    \end{itemize}
+\end{frame}
+
+\section{Background}
+\begin{frame}{Background}
+    \begin{block}{Block 1}
+        This is Block no.1.
+    \end{block}
+
+    \begin{block}{Block 2}
+        This is Block no.2.
+    \end{block}
+\end{frame}
+
+\section{Objectives}
+\begin{frame}{Objectives}
+    \begin{enumerate}
+        \item Objective 1
+        \item Objective 2
+        \item Objective 3
+    \end{enumerate}
+\end{frame}
+
+\section{Data and methods}
+\begin{frame}{Data and methods}
+    \begin{itemize}
+        \item Data and sample
+        \item Measures
+        \item Analytical strategy
+    \end{itemize}
+\end{frame}
+
+\section{Results}
+\begin{frame}{Results}
+    \begin{table}
+        \begin{tabular}{l l l}
+            \toprule
+            \textbf{Variables} & \textbf{Coef} & \textbf{SE} \\
+            \midrule
+            Gender             & 0.10          & 0.05        \\
+            Age                & 0.10          & 0.05        \\
+            Education          & 0.10          & 0.05        \\
+            \bottomrule
+        \end{tabular}
+        \caption{Table caption}
+    \end{table}
+\end{frame}
+
+\begin{frame}{Results}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\textwidth]{placeholder}
+        \caption{To be replaced}
+        \label{fig:my_label}
+    \end{figure}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}{Conclusion}
+    \begin{itemize}
+        \item more work
+              \medskip
+        \item more responsibility
+              \medskip
+        \item more satisfaction
+    \end{itemize}
+\end{frame}
+
+\beamerdefaultoverlayspecification{}
+
+\nocite{*}
+% \begin{frame}<0>[noframenumbering]{Reference} % Replace with this to remove reference frames
+\begin{frame}[allowframebreaks]{Reference}
+    \bibliographystyle{apalike}
+    \bibliography{library.bib}
+\end{frame}
+
+\end{document}
