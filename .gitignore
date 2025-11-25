@@ -4,10 +4,24 @@
 # macOS
 .DS_Store
 
-# LaTeX build files
-template/*
-!template/main.tex
-!template/library.bib
-!template/main.pdf
-!template/NYUAD_logo.jpg
-!template/placeholder.jpg
+# LaTeX cache
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz*
+*.toc
+*.lof
+*.lot
+*.nav
+*.out
+*.snm
+*.vrb
+*.bbl
+*.blg
+*.thm
+*.tdo
+*.bak
+*.idx
+*.ind
+*.ilg

@@ -1,0 +1,84 @@
+% slides.sty --- Style file for NYUAD course presentations
+\ProvidesPackage{slides}[2025/11/25 NYUAD Slides Style]
+
+% ------------------------------------------------------------
+% Required packages
+% ------------------------------------------------------------
+\RequirePackage[T1]{fontenc}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[english]{babel}
+\RequirePackage{graphicx}
+\RequirePackage{booktabs}
+\RequirePackage[absolute,overlay]{textpos}
+\RequirePackage{hyperref}
+\RequirePackage{natbib}
+\RequirePackage[sfdefault]{roboto} % Font
+
+% ------------------------------------------------------------
+% Beamer theme
+% ------------------------------------------------------------
+\mode<presentation>{
+    \usetheme{Madrid}
+    \usefonttheme{professionalfonts}
+    \setbeamercovered{transparent}
+}
+
+% ------------------------------------------------------------
+% Color configuration
+% ------------------------------------------------------------
+\definecolor{nyuad-violet-primary}{rgb}{0.341, 0.024, 0.549}
+\definecolor{nyuad-violet-secondary}{rgb}{0.541, 0.322, 0.678}
+\definecolor{nyuad-black}{HTML}{000000}
+\definecolor{grey}{HTML}{b8b8b8}
+
+\setbeamercolor{palette primary}{bg=nyuad-violet-primary, fg=white}
+\setbeamercolor{palette secondary}{bg=nyuad-violet-secondary, fg=white}
+\setbeamercolor{palette tertiary}{bg=nyuad-violet-secondary, fg=white}
+\setbeamercolor{palette quaternary}{bg=nyuad-black, fg=white} % Section head (left)
+
+\setbeamercolor{structure}{fg=nyuad-black} % Itemize, enumerate, etc.
+
+\setbeamercolor{subsection in head/foot}{bg=nyuad-violet-primary, fg=white}
+
+\setbeamertemplate{caption}[numbered]
+
+% ------------------------------------------------------------
+% Logo
+% ------------------------------------------------------------
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+\addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{\TPHorizModule}(0.76\TPHorizModule,-0.001\TPVertModule)
+        \includegraphics[height=0.9cm]{assets/logo.jpg}%
+    \end{textblock*}%
+}
+
+% ------------------------------------------------------------
+% Metadata commands
+% ------------------------------------------------------------
+% Setters
+\newcommand{\coursecode}[1]{\def\@coursecode{#1}}
+\newcommand{\coursename}[1]{\def\@coursename{#1}}
+\newcommand{\semester}[1]{\def\@semester{#1}}
+\newcommand{\instructor}[1]{\def\@instructor{#1}}
+\newcommand{\instructoremail}[1]{\def\@instructoremail{#1}}
+\newcommand{\institution}[1]{\def\@institution{#1}}
+
+% Default values
+\coursecode{COURSE XXX}
+\coursename{Course Name}
+\semester{Fall 2026}
+\instructor{Instructor Name}
+\instructoremail{\href{mailto:instructor@nyu.edu}{instructor@nyu.edu}}
+\institution{New York University Abu Dhabi}
+
+% Getters
+\newcommand{\thecoursecode}{\@coursecode}
+\newcommand{\thecoursename}{\@coursename}
+\newcommand{\thesemester}{\@semester}
+\newcommand{\theinstructor}{\@instructor}
+\newcommand{\theinstructoremail}{\@instructoremail}
+\newcommand{\theinstitution}{\@institution}
+
+\endinput

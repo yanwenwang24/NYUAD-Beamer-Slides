@@ -2,22 +2,21 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A $\LaTeX$ beamer template for academic presentations following the color scheme of New York University Abu Dhabi.
+A $\LaTeX$ beamer template following the color scheme of New York University Abu Dhabi.
+
+## Files
+
+- `slides.tex` — Main presentation file
+- `slides.sty` — Custom style package and metadata
+- `library.bib` — Bibliography file
+- `assets/` — Logo and images
 
 ## Usage
 
-Edit the [main.tex](./template/main.tex) file according to your content.
+1. Edit `slides.sty` with your metadata
+2. Edit `slides.tex` with your content
+3. Compile with:
 
-## Preview
-
-Here are some sample slides from the template:
-
-![Title Page](./assets/page_title.jpg)
-
-![Outline Page](./assets/page_outline.jpg)
-
-![Content Example](./assets/page_content.jpg)
-
-![Tables Example](./assets/page_table.jpg)
-
-![References Page](./assets/page_references.jpg)
+   ```bash
+   pdflatex slides
+   ```

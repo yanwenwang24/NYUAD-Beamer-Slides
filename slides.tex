@@ -1,0 +1,147 @@
+% --------------------------------------------------------------------
+% Lecture 1 Slides
+% --------------------------------------------------------------------
+
+% --------------------------------------------------------------------
+% Document class
+% --------------------------------------------------------------------
+\documentclass[11pt]{beamer}
+
+% --------------------------------------------------------------------
+% Custom style package
+% --------------------------------------------------------------------
+\usepackage{slides}
+
+% --------------------------------------------------------------------
+% Lecture-specific metadata
+% --------------------------------------------------------------------
+\title[\thecoursename]{Lecture 1: Introduction}
+\author[\theinstructor]{\theinstructor}
+\institute[NYUAD]{\footnotesize \theinstitution}
+\date[\thesemester]{\footnotesize \today}
+
+% --------------------------------------------------------------------
+% Beamer overlay behavior (uncomment)
+% --------------------------------------------------------------------
+% \beamerdefaultoverlayspecification{<+->}
+
+% --------------------------------------------------------------------
+% 5. Document begins
+% --------------------------------------------------------------------
+\begin{document}
+
+% --------------------------------------------------------------------
+% Title slide
+% --------------------------------------------------------------------
+\begin{frame}
+    \titlepage
+\end{frame}
+
+% --------------------------------------------------------------------
+% Table of contents
+% --------------------------------------------------------------------
+\begin{frame}{Outline}
+    % Show only top-level sections
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+% --------------------------------------------------------------------
+% Section 1: Introduction
+% --------------------------------------------------------------------
+\section{Introduction}
+
+\begin{frame}{Introduction}
+    \begin{itemize}
+        \item This is an item \citep{Smith:2012qr}.
+    \end{itemize}
+\end{frame}
+
+% --------------------------------------------------------------------
+% Section 2: Objectives
+% --------------------------------------------------------------------
+\section{Objectives}
+
+\begin{frame}{Objectives}
+    \begin{enumerate}
+        \item Objective 1
+        \item Objective 2
+        \item Objective 3
+    \end{enumerate}
+\end{frame}
+
+% --------------------------------------------------------------------
+% Section 3: Data and methods
+% --------------------------------------------------------------------
+\section{Data and methods}
+
+\begin{frame}{Data and methods}
+    \begin{itemize}
+        \item Data and sample
+        \item Measures
+        \item Analytical strategy
+              \begin{equation}
+                  Y_i = \beta
+              \end{equation}
+    \end{itemize}
+\end{frame}
+
+% --------------------------------------------------------------------
+% Section 4: Results
+% --------------------------------------------------------------------
+\section{Results}
+
+% --- Results: Table example -----------------------------------------
+\begin{frame}{Results}
+    \begin{table}
+        \centering
+        \begin{tabular}{l l l}
+            \toprule
+            \textbf{Variables} & \textbf{Coef} & \textbf{SE} \\
+            \midrule
+            Gender             & 0.10          & 0.05        \\
+            Age                & 0.10          & 0.05        \\
+            Education          & 0.10          & 0.05        \\
+            \bottomrule
+        \end{tabular}
+        \caption{Table caption}
+    \end{table}
+\end{frame}
+
+% --- Results: Figure example ----------------------------------------
+\begin{frame}{Results}
+    \begin{figure}
+        \centering
+        % Replace assets/placeholder.jpg with your actual figure
+        \includegraphics[width=.5\textwidth]{assets/placeholder.jpg}
+        \caption{To be replaced}
+        \label{fig:my_label}
+    \end{figure}
+\end{frame}
+
+% --------------------------------------------------------------------
+% Section 5: Takeaway
+% --------------------------------------------------------------------
+\section{Takeaway}
+
+\begin{frame}{Takeaway}
+    \begin{itemize}
+        \item more work
+              \medskip
+        \item more responsibility
+              \medskip
+        \item more satisfaction
+    \end{itemize}
+\end{frame}
+
+% --------------------------------------------------------------------
+% References
+% --------------------------------------------------------------------
+\begin{frame}[allowframebreaks]{Reference}
+    \bibliographystyle{apalike}
+    \bibliography{template/library}
+\end{frame}
+
+% --------------------------------------------------------------------
+% End of document
+% --------------------------------------------------------------------
+\end{document}
