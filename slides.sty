@@ -7,11 +7,11 @@
 \RequirePackage[T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english]{babel}
+\RequirePackage{csquotes}
 \RequirePackage{graphicx}
 \RequirePackage{booktabs}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage{hyperref}
-\RequirePackage{natbib}
 \RequirePackage[sfdefault]{roboto} % Font
 
 % ------------------------------------------------------------
@@ -53,6 +53,12 @@
         \includegraphics[height=0.9cm]{assets/logo.jpg}%
     \end{textblock*}%
 }
+
+% ------------------------------------------------------------
+% Bibliography
+% ------------------------------------------------------------
+\usepackage[backend=biber, style=apa, sorting=nyt]{biblatex}
+\addbibresource{library.bib}
 
 % ------------------------------------------------------------
 % Metadata commands

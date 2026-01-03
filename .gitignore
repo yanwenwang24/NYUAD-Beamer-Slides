@@ -25,3 +25,5 @@
 *.idx
 *.ind
 *.ilg
+*.xml
+*.bcf
